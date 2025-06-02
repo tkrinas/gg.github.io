@@ -1,0 +1,265 @@
+/* File: /css/main.css */
+
+/* Color Palette & Typography */
+:root {
+  --color-primary: #0057b8;
+  --color-accent:  #00aaff;
+  --color-text:    #333333;
+  --color-bg:      #ffffff;
+  --color-footer-bg: #222222;
+  --font-family:   'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Global Resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--color-bg);
+  position: relative;
+  z-index: 100;
+}
+.logo img {
+  height: 40px;
+  width: auto;
+}
+.nav-links {
+  display: none;
+  list-style: none;
+}
+.nav-links li + li {
+  margin-top: 1rem;
+}
+.nav-links a {
+  font-size: 1rem;
+  color: var(--color-text);
+}
+.nav-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: 25px;
+  height: 3px;
+  background: var(--color-text);
+  display: block;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.hamburger::before {
+  top: -8px;
+}
+.hamburger::after {
+  top: 8px;
+}
+.nav-open .nav-links {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--color-bg);
+  padding: 1rem;
+}
+
+/* Language Switch */
+.lang-switch a {
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+/* Hero Section */
+.hero {
+  background: url('../images/hero.jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+}
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 8px;
+}
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: var(--color-accent);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: var(--color-primary);
+}
+
+/* About Section */
+.about {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.about h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.features {
+  list-style: none;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.features li {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Services Teaser */
+.services-teaser {
+  padding: 2rem 1rem;
+}
+.services-teaser h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.card {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+.card h3 {
+  margin-bottom: 0.5rem;
+}
+.card-link {
+  margin-top: 0.5rem;
+  display: inline-block;
+  color: var(--color-primary);
+}
+
+/* Gallery Preview */
+.gallery-preview {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  background: var(--color-footer-bg);
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+}
+.footer-logo img {
+  height: 30px;
+  margin-bottom: 0.5rem;
+}
+.footer-nav a {
+  color: #ffffff;
+  margin: 0 0.25rem;
+  font-size: 0.9rem;
+}
+.footer-info {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 768px) {
+  .nav-toggle {
+    display: none;
+  }
+  .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+    position: static;
+    background: none;
+    padding: 0;
+  }
+  .nav-links li + li {
+    margin-top: 0;
+  }
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  .hero-content p {
+    font-size: 1.25rem;
+  }
+  .features {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+}
