@@ -26,7 +26,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://tkrinas.github.io/natlab.github.io
+      url: https://tkrinas.github.io/gg.github.io
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
