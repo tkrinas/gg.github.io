@@ -1,36 +1,28 @@
 <!DOCTYPE html>
 <html lang="el">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Γιώργος Γκολφινοπουλος - Εξειδικευμένες Ηλεκτρολογικές Εργασίες σε Πάτρα και σε όλη την Ελλάδα. Σπίτια · Επιχειρήσεις · Ξενοδοχεία">
-  <link rel="alternate" hreflang="en" href="../en/index.html">
-  <link rel="alternate" hreflang="el" href="../el/index.html">
-  <title>Γιώργος Γκολφινοπουλος - Ηλεκτρολογικές Εργασίες</title>
-  <link rel="icon" href="../images/favicon.svg">
-  <link rel="stylesheet" href="../css/main.css">
-  <script src="../js/nav.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Αρχική – Γιώργος Γκολφινοπούλος</title>
+
+  <!-- 1. STYLESHEET -->
+  <link rel="stylesheet" href="/gg.github.io/css/main.css" />
+
+  <!-- 2. NAV TOGGLE & INCLUDES -->
+  <script defer src="/gg.github.io/js/nav.js"></script>
+  <script defer src="/gg.github.io/js/includes.js"></script>
+
+  <!-- 3. i18n SEO links -->
+  <link rel="alternate" hreflang="en" href="/gg.github.io/en/index.html" />
+  <link rel="alternate" hreflang="el" href="/gg.github.io/el/index.html" />
 </head>
+
 <body>
-  <header>
-    <nav role="navigation" class="navbar">
-      <div class="logo">
-        <a href="index.html"><img src="../images/logo.svg" alt="Λογότυπο GG"></a>
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Αρχική</a></li>
-        <li><a href="services.html">Υπηρεσίες</a></li>
-        <li><a href="gallery.html">Φωτογραφίες</a></li>
-        <li><a href="contact.html">Επικοινωνία</a></li>
-      </ul>
-      <button class="nav-toggle" aria-label="Εναλλαγή μενού">
-        <span class="hamburger"></span>
-      </button>
-      <div class="lang-switch">
-        <a href="../en/index.html" aria-label="Switch to English">EN</a>
-      </div>
-    </nav>
-  </header>
+
+  <!-- ******** decoupled header ******** -->
+  <div id="site-header"></div>
+
   <main role="main">
     <!-- Hero -->
     <section class="hero">
@@ -88,18 +80,11 @@
     </section>
   </main>
 
-  <footer role="contentinfo">
-    <div class="footer-logo"><img src="../images/logo.svg" alt="Λογότυπο GG"></div>
-    <nav class="footer-nav">
-      <a href="index.html">Αρχική</a> |
-      <a href="services.html">Υπηρεσίες</a> |
-      <a href="gallery.html">Φωτογραφίες</a> |
-      <a href="contact.html">Επικοινωνία</a>
-    </nav>
-    <div class="footer-info">
-      <p>&copy; 2025 Γιώργος Γκολφινοπουλος</p>
-      <a href="../en/index.html">English</a>
-    </div>
-  </footer>
+  <!-- ******** decoupled footer ******** -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts -->
+  <script defer src="/gg.github.io/js/nav.js"></script>
+  <script defer src="/gg.github.io/js/includes.js"></script>
 </body>
 </html>
