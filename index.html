@@ -3,103 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="George Golfinopoulos - Expert Electrical Installations in Patras and across Greece. Homes · Businesses · Hotels">
-  <link rel="alternate" hreflang="el" href="/el/index.html">
-  <link rel="alternate" hreflang="en" href="/en/index.html">
-  <title>George Golfinopoulos - Electrical Installations</title>
-  <link rel="icon" href="/images/favicon.svg">
-  <link rel="stylesheet" href="../css/main.css">
-  <script src="../js/nav.js" defer></script>
+  <meta http-equiv="refresh" content="0; url=en/index.html">
+  <title>George Golfinopoulos – Welcome</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script>
+    // Detect browser language and redirect to the appropriate version
+    document.addEventListener('DOMContentLoaded', function() {
+      const userLang = navigator.language || navigator.userLanguage;
+      if (userLang.startsWith('el')) {
+        window.location.replace('el/index.html');
+      } else {
+        window.location.replace('en/index.html');
+      }
+    });
+  </script>
 </head>
 <body>
-  <header>
-    <nav role="navigation" class="navbar">
-      <div class="logo">
-        <a href="/en/index.html"><img src="/images/logo.svg" alt="GG Logo"></a>
-      </div>
-      <ul class="nav-links">
-        <li><a href="/en/index.html">Home</a></li>
-        <li><a href="/en/services.html">Services</a></li>
-        <li><a href="/en/gallery.html">Gallery</a></li>
-        <li><a href="/en/contact.html">Contact</a></li>
-      </ul>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <div class="lang-switch">
-        <a href="/el/index.html" aria-label="Switch to Greek">ΕΛ</a>
-      </div>
-    </nav>
-  </header>
-  <main role="main">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-content">
-        <h1>George Golfinopoulos</h1>
-        <p>Expert Electrical Installations</p>
-        <p>Homes · Businesses · Hotels</p>
-        <a href="/en/contact.html" class="btn">Get a Quote</a>
-      </div>
-    </section>
-
-    <!-- About / Why Choose Us -->
-    <section class="about">
-      <h2>Why Choose Us</h2>
-      <p>With over 15 years of experience serving Patras and all of Greece, we provide licensed, insured, and rapid response electrical services.</p>
-      <ul class="features">
-        <li>Licensed Electricians</li>
-        <li>Fully Insured</li>
-        <li>24/7 Rapid Response</li>
-      </ul>
-    </section>
-
-    <!-- Services Teaser -->
-    <section class="services-teaser">
-      <h2>Our Services</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Installations</h3>
-          <p>New electrical installations for homes, businesses, and hotels.</p>
-          <a href="/en/services.html" class="card-link">Learn More</a>
-        </div>
-        <div class="card">
-          <h3>Repairs</h3>
-          <p>Quick and reliable electrical repairs.</p>
-          <a href="/en/services.html#repairs" class="card-link">Learn More</a>
-        </div>
-        <div class="card">
-          <h3>Certifications</h3>
-          <p>Professional electrical certifications and inspections.</p>
-          <a href="/en/services.html#certifications" class="card-link">Learn More</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery Preview -->
-    <section class="gallery-preview">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <img src="/images/gallery/thumb1.jpg" alt="Electrical installation example">
-        <img src="/images/gallery/thumb2.jpg" alt="Hotel wiring project">
-        <img src="/images/gallery/thumb3.jpg" alt="Residential repair work">
-        <img src="/images/gallery/thumb4.jpg" alt="Certification inspection">
-      </div>
-      <a href="/en/gallery.html" class="btn">View More</a>
-    </section>
-  </main>
-
-  <footer role="contentinfo">
-    <div class="footer-logo"><img src="/images/logo.svg" alt="GG Logo"></div>
-    <nav class="footer-nav">
-      <a href="/en/index.html">Home</a> |
-      <a href="/en/services.html">Services</a> |
-      <a href="/en/gallery.html">Gallery</a> |
-      <a href="/en/contact.html">Contact</a>
-    </nav>
-    <div class="footer-info">
-      <p>&copy; 2025 George Golfinopoulos</p>
-      <a href="/el/index.html">Ελληνικά</a>
-    </div>
-  </footer>
+  <noscript>
+    <p>JavaScript is required to redirect. Please choose your language:</p>
+    <ul>
+      <li><a href="en/index.html">English</a></li>
+      <li><a href="el/index.html">Ελληνικά</a></li>
+    </ul>
+  </noscript>
 </body>
 </html>
