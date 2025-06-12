@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
+  <!-- Two interlocking G letters -->
+  <text x="40" y="150" font-family="Arial, sans-serif" font-size="140" font-weight="bold" fill="#0057B8">G</text>
+  <text x="120" y="150" font-family="Arial, sans-serif" font-size="140" font-weight="bold" fill="#00AAFF">G</text>
+  <!-- Yellow lightning bolt -->
+  <polygon points="175,60 155,120 185,115 160,180 225,85 190,90 210,60" fill="#FFCC00"/>
+</svg>
