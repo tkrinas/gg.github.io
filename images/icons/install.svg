@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Prongs -->
+  <path fill="none" stroke="currentColor" stroke-width="4" d="M20 8v10h5V8z"/>
+  <path fill="none" stroke="currentColor" stroke-width="4" d="M39 8v10h5V8z"/>
+  <!-- Plug body -->
+  <path fill="none" stroke="currentColor" stroke-width="4" d="M15 18h34v22a8 8 0 0 1-8 8H23a8 8 0 0 1-8-8z"/>
+</svg>

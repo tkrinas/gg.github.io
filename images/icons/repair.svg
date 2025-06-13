@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Wrench handle -->
+  <path fill="none" stroke="currentColor" stroke-width="4" d="M10 54l30-30"/>
+  <!-- Wrench head -->
+  <path fill="none" stroke="currentColor" stroke-width="4" d="M45 10l9 9-9 9-5-5 5-5z"/>
+  <!-- Wrench jaw -->
+  <path fill="none" stroke="currentColor" stroke-width="4" d="M42 13l9 9"/>
+</svg>

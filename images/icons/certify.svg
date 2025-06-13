@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Certificate rectangle -->
+  <rect x="8" y="8" width="48" height="40" fill="none" stroke="currentColor" stroke-width="4" rx="2" ry="2"/>
+  <!-- Ribbon circle -->
+  <circle cx="32" cy="38" r="8" fill="none" stroke="currentColor" stroke-width="4"/>
+  <!-- Ribbon tails -->
+  <path fill="none" stroke="currentColor" stroke-width="4" d="M28 46v10l4-4 4 4V46"/>
+  <!-- Check mark inside ribbon -->
+  <path fill="none" stroke="currentColor" stroke-width="4" d="M28 38l4 4 8-8"/>
+</svg>
