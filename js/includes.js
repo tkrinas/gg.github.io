@@ -1,21 +1,25 @@
+// File: /js/includes.js
 
 document.addEventListener('DOMContentLoaded', () => {
   const BASE = '/gg.github.io/';
   const path = window.location.pathname;
   const segments = path.split('/').filter(Boolean);
-  // Determine current language
+
+  // 1. Determine current language and header include
   const lang = segments.includes('el') ? 'el' : 'en';
   const headerFile = `header_${lang}.html`;
 
-  // Compute the “page” (e.g. services.html or index.html)
+  // 2. Compute the “page” portion (e.g. services.html or index.html)
   const langIndex = segments.indexOf(lang);
   let page = '';
   if (langIndex >= 0 && segments.length > langIndex + 1) {
     page = segments.slice(langIndex + 1).join('/');
   }
-  if (!page) page = 'index.html';
+  if (!page) {
+    page = 'index.html';
+  }
 
-  // 1. Mobile nav toggle
+  // 3. Mobile nav toggle
   function initNavToggle() {
     const toggle = document.querySelector('.nav-toggle');
     if (!toggle) return;
@@ -27,14 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. Language switch links
+  // 4. Language switch links
   function initLangSwitch() {
     document.querySelectorAll('.lang-switch-link').forEach(a => {
       a.href = `${BASE}${a.dataset.lang}/${page}`;
     });
   }
 
-  // 3. Dark mode toggle
+  // 5. Dark mode toggle
   function initThemeToggle() {
     const toggle = document.getElementById('theme-toggle');
     if (!toggle) return;
@@ -59,7 +63,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Fetch and inject an include file
+  // 6. Contact CTA link
+  function initContactCTA() {
+    const cta = document.getElementById('contact-cta');
+    if (!cta) return;
+    cta.href = `${BASE}${lang}/contact.html`;
+  }
+
+  // 7. Fetch and inject includes
   function loadInclude(id, file) {
     fetch(`${BASE}includes/${file}`)
       .then(res => {
@@ -74,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
           initNavToggle();
           initLangSwitch();
           initThemeToggle();
+          initContactCTA();
         }
       })
       .catch(err => console.error(err));
@@ -84,24 +96,22 @@ document.addEventListener('DOMContentLoaded', () => {
   loadInclude('site-footer', 'footer.html');
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
   const observerOptions = {
-    root: null,            // viewport
+    root: null,
     rootMargin: '0px',
-    threshold: 0.1         // 10% of the element visible
+    threshold: 0.1
   };
 
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        obs.unobserve(entry.target); // animate once
+        obs.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  // Observe all elements with .fade-in
   document.querySelectorAll('.fade-in').forEach(el => {
     observer.observe(el);
   });
