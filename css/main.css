@@ -432,3 +432,32 @@ footer,
     gap: 1rem;
   }
 }
+
+/* Language Switcher Icons */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.lang-switch a {
+  display: inline-block;
+}
+.lang-switch img {
+  display: block;
+  width: 24px;
+  height: auto;
+  filter: grayscale(20%); /* slight desaturate */
+  transition: filter 0.2s;
+}
+.lang-switch img:hover,
+.lang-switch img:focus {
+  filter: none;
+}
+
+/* On desktop, keep it inline with nav */
+@media (min-width: 768px) {
+  .site-header .lang-switch {
+    margin: 0 0 0 2rem;
+  }
+}

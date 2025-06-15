@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 12">
+  <!-- Stripes -->
+  <rect width="18" height="1.3333" y="0" fill="#0D5EAF"/>
+  <rect width="18" height="1.3333" y="1.3333" fill="#FFFFFF"/>
+  <rect width="18" height="1.3333" y="2.6666" fill="#0D5EAF"/>
+  <rect width="18" height="1.3333" y="4" fill="#FFFFFF"/>
+  <rect width="18" height="1.3333" y="5.3333" fill="#0D5EAF"/>
+  <rect width="18" height="1.3333" y="6.6666" fill="#FFFFFF"/>
+  <rect width="18" height="1.3333" y="8" fill="#0D5EAF"/>
+  <rect width="18" height="1.3333" y="9.3333" fill="#FFFFFF"/>
+  <rect width="18" height="1.3333" y="10.6666" fill="#0D5EAF"/>
+
+  <!-- Canton with cross -->
+  <rect width="6.6666" height="6.6666" fill="#0D5EAF"/>
+  <rect x="2.6666" y="0" width="1.3333" height="6.6666" fill="#FFFFFF"/>
+  <rect x="0" y="2.6666" width="6.6666" height="1.3333" fill="#FFFFFF"/>
+</svg>
