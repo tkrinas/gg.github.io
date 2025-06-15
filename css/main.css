@@ -48,8 +48,6 @@ a:focus {
   align-items: center;
   justify-content: space-between;
   background: var(--color-bg);
-  position: relative;
-  z-index: 100;
 }
 .site-header .logo img {
   height: 50px;
@@ -460,4 +458,26 @@ footer,
   .site-header .lang-switch {
     margin: 0 0 0 2rem;
   }
+}
+
+/* Sticky, Shrinking Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: var(--color-bg);
+  transition: padding 0.3s ease, background 0.3s ease;
+  z-index: 200;
+}
+.site-header.shrink {
+  padding: 0.5rem 1rem;    /* reduce vertical padding */
+  background: rgba(255,255,255,0.95); /* slight translucent white */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Logo transition */
+.site-header .logo img {
+  transition: height 0.3s ease;
+}
+.site-header.shrink .logo img {
+  height: 40px;            /* shrink logo */
 }
