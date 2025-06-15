@@ -1,5 +1,10 @@
 /* File: /css/main.css */
 
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
 /* 0. Theme Variables & Dark‐Mode Override */
 :root {
   --color-primary:    #0057b8;
