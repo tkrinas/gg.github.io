@@ -83,3 +83,26 @@ document.addEventListener('DOMContentLoaded', () => {
   loadInclude('site-header', headerFile);
   loadInclude('site-footer', 'footer.html');
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const observerOptions = {
+    root: null,            // viewport
+    rootMargin: '0px',
+    threshold: 0.1         // 10% of the element visible
+  };
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target); // animate once
+      }
+    });
+  }, observerOptions);
+
+  // Observe all elements with .fade-in
+  document.querySelectorAll('.fade-in').forEach(el => {
+    observer.observe(el);
+  });
+});
